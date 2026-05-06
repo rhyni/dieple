@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Điệp Lê — Giảng viên</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="logo">Điệp Lê</a>
+      <ul class="nav-links">
+        <li><a href="#home">Trang chủ</a></li>
+        <li><a href="#profile">Hồ sơ</a></li>
+        <li><a href="#docs">Tài liệu</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul class="mobile-menu" id="mobileMenu">
+      <li><a href="#home" onclick="closeMobile()">Trang chủ</a></li>
+      <li><a href="#profile" onclick="closeMobile()">Hồ sơ</a></li>
+      <li><a href="#docs" onclick="closeMobile()">Tài liệu</a></li>
+      <li><a href="#contact" onclick="closeMobile()">Liên hệ</a></li>
+    </ul>
+  </nav>
+
+  <!-- HOME -->
+  <section id="home">
+    <div class="hero-wrap">
+      <div class="hero-text">
+        <p class="hero-tag">Giảng viên Đại học</p>
+        <h1>Lê Thị <em>Điệp</em></h1>
+        <p class="hero-sub">Khoa Thương mại Quốc tế &amp; Digital Marketing</p>
+        <p class="hero-desc">Chia sẻ tài liệu học tập miễn phí cho sinh viên các môn Logistics, Digital Marketing, Thương mại điện tử và Ngoại thương.</p>
+        <div class="hero-btns">
+          <a href="#docs" class="btn-main">Xem tài liệu</a>
+          <a href="#profile" class="btn-ghost">Hồ sơ giảng viên</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="stat"><span class="num">11</span><span class="lbl">Môn học</span></div>
+        <div class="stat"><span class="num">500+</span><span class="lbl">Sinh viên</span></div>
+        <div class="stat"><span class="num">10+</span><span class="lbl">Năm giảng dạy</span></div>
+        <div class="stat"><span class="num">100%</span><span class="lbl">Miễn phí</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFILE -->
+  <section id="profile">
+    <div class="section-head">
+      <p class="label">Hồ sơ giảng viên</p>
+      <h2>Về tôi</h2>
+    </div>
+    <div class="profile-wrap">
+      <div class="avatar-box">
+        <!-- Thay bằng <img src="anh.jpg" alt="Điệp Lê"> nếu có ảnh -->
+        <div class="avatar-placeholder">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="24" r="14" fill="currentColor" opacity=".25"/><path d="M8 56c0-13.255 10.745-24 24-24s24 10.745 24 24" fill="currentColor" opacity=".15"/></svg>
+          <p>Thêm ảnh tại đây</p>
+        </div>
+      </div>
+      <div class="profile-info">
+        <div class="info-group">
+          <h3>Thông tin cơ bản</h3>
+          <div class="info-row"><span class="k">Họ tên</span><span class="v">Lê Thị Điệp</span></div>
+          <div class="info-row"><span class="k">Học vị</span><span class="v">Thạc sĩ / Tiến sĩ</span></div>
+          <div class="info-row"><span class="k">Khoa</span><span class="v">Thương mại Quốc tế</span></div>
+          <div class="info-row"><span class="k">Trường</span><span class="v">— Tên trường —</span></div>
+          <div class="info-row"><span class="k">Email</span><span class="v">diep.le@university.edu.vn</span></div>
+        </div>
+        <div class="info-group">
+          <h3>Môn giảng dạy</h3>
+          <div class="tag-list">
+            <span class="tag tag-blue">Logistics</span>
+            <span class="tag tag-blue">Nghiệp vụ giao nhận HH</span>
+            <span class="tag tag-blue">Giao dịch TMQT</span>
+            <span class="tag tag-blue">CĐ Giao nhận &amp; TTHQ</span>
+            <span class="tag tag-green">Digital Marketing</span>
+            <span class="tag tag-green">Nhập môn Digital MKT</span>
+            <span class="tag tag-green">Công cụ Digital MKT</span>
+            <span class="tag tag-green">Kế hoạch Digital MKT</span>
+            <span class="tag tag-amber">Thương mại điện tử</span>
+            <span class="tag tag-amber">Quản trị Ngoại thương</span>
+            <span class="tag tag-amber">CĐ Mua bán HH Quốc tế</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TÀI LIỆU -->
+  <section id="docs" class="docs-section">
+    <div class="section-head">
+      <p class="label">Tài nguyên học tập</p>
+      <h2>Tài liệu học tập</h2>
+      <p class="section-desc">Nhấn vào môn học để mở tài liệu trên Google Drive.</p>
+    </div>
+
+    <!-- FILTER TABS -->
+    <div class="tabs">
+      <button class="tab active" data-filter="all">Tất cả</button>
+      <button class="tab" data-filter="logistics">Logistics</button>
+      <button class="tab" data-filter="marketing">Digital Marketing</button>
+      <button class="tab" data-filter="tmdt">Ngoại thương &amp; TMĐT</button>
+    </div>
+
+    <div class="cards-grid" id="cardsGrid">
+
+      <a href="LINK_DRIVE_LOGISTICS" target="_blank" class="card" data-cat="logistics">
+        <div class="card-icon">🚢</div>
+        <div class="card-body">
+          <p class="card-cat">Logistics</p>
+          <h3>Logistics</h3>
+          <p>Chuỗi cung ứng, vận tải và phân phối hàng hóa toàn cầu.</p>
+        </div>
+        <span class="card-arrow">↗</span>
+      </a>
+
+      <a href="LINK_DRIVE_GIAO_NHAN" target="_blank" class="card" data-cat="logistics">
+        <div class="card-icon">📦</div>
+        <div class="card-body">
+          <p class="card-cat">Logistics</p>
+          <h3>Nghiệp vụ giao nhận hàng hóa</h3>
+          <p>Quy trình giao nhận, vận đơn và thủ tục hải quan.</p>
+        </div>
+        <span class="card-arrow">↗</span>
+      </a>
+
+      <a href="LINK_DRIVE_GIAODICH_TMQT" target="_blank" class="card" data-cat="logistics">
+        <div class="card-icon">🤝</div>
+        <div class="card-body">
+          <p class="card-cat">Logistics</p>
+          <h3>Giao dịch TMQT</h3>
+          <p>Đàm phán, soạn thảo hợp đồng và thư tín thương mại quốc tế.</p>
+        </div>
+        <span class="card-arrow">↗</span>
+      </a>
+
+      <a href="LINK_DRIVE_HIEN_TRUONG" target="_blank" class="card" data-cat="logistics">
+        <div class="card-icon">🏗️</div>
+        <div class="card-body">
+          <p class="card-cat">Logistics</p>
+          <h3>CĐ Giao nhận hiện trường &amp; TTHQ</h3>
+          <p>Thực hành nghiệp vụ tại cảng, kho bãi và hải quan.</p>
+        </div>
+        <span class="card-arrow">↗</span>
+      </a>
+
+      <a href="LINK_DRIVE_DIGITAL_MKT" target="_blank" class="card" data-cat="marketing">
+        <div class="card-icon">📱</div>
+        <div class="card-body">
+          <p class="card-cat">Digital Marketing</p>
+          <h3>Digital Marketing</h3>
+          <p>Chiến lược marketing số, quảng cáo trực tuyến, phân tích dữ liệu.</p>
+        </div>
+        <span class="card-arrow">↗</span>
+      </a>
+
+      <a href="LINK_DRIVE_NHAP_MON_DM" target="_blank" class="card" data-cat="marketing">
+        <div class="card-icon">🎯</div>
+        <div class="card-body">
+          <p class="card-cat">Digital Marketing</p>
+          <h3>Nhập môn Digital Marketing</h3>
+          <p>Tổng quan, xu hướng và cơ hội nghề nghiệp trong marketing số.</p>
+        </div>
+        <span class="card-arrow">↗</span>
+      </a>
+
+      <a href="LINK_DRIVE_CONG_CU_DM" target="_blank" class="card" data-cat="marketing">
+        <div class="card-icon">🛠️</div>
+        <div class="card-body">
+          <p class="card-cat">Digital Marketing</p>
+          <h3>Các công cụ Digital Marketing</h3>
+          <p>Google Ads, Facebook Ads, SEO, Analytics và Canva.</p>
+        </div>
+        <span class="card-arrow">↗</span>
+      </a>
+
+      <a href="LINK_DRIVE_KH_DM" target="_blank" class="card" data-cat="marketing">
+        <div class="card-icon">📊</div>
+        <div class="card-body">
+          <p class="card-cat">Digital Marketing</p>
+          <h3>Xây dựng kế hoạch Digital Marketing</h3>
+          <p>Lập kế hoạch marketing số: thị trường, KPIs và ngân sách.</p>
+        </div>
+        <span class="card-arrow">↗</span>
+      </a>
+
+      <a href="LINK_DRIVE_TMDT" target="_blank" class="card" data-cat="tmdt">
+        <div class="card-icon">🛒</div>
+        <div class="card-body">
+          <p class="card-cat">Ngoại thương &amp; TMĐT</p>
+          <h3>Thương mại điện tử</h3>
+          <p>Mô hình TMĐT, sàn bán hàng, thanh toán và pháp lý.</p>
+        </div>
+        <span class="card-arrow">↗</span>
+      </a>
+
+      <a href="LINK_DRIVE_NGOAI_THUONG" target="_blank" class="card" data-cat="tmdt">
+        <div class="card-icon">🌏</div>
+        <div class="card-body">
+          <p class="card-cat">Ngoại thương &amp; TMĐT</p>
+          <h3>Quản trị Ngoại thương</h3>
+          <p>Xuất nhập khẩu, hợp đồng ngoại thương và thanh toán quốc tế.</p>
+        </div>
+        <span class="card-arrow">↗</span>
+      </a>
+
+      <a href="LINK_DRIVE_MUABAN_HH" target="_blank" class="card" data-cat="tmdt">
+        <div class="card-icon">📋</div>
+        <div class="card-body">
+          <p class="card-cat">Ngoại thương &amp; TMĐT</p>
+          <h3>CĐ Mua bán Hàng hóa Quốc tế</h3>
+          <p>Incoterms, phương thức mua bán và đàm phán hợp đồng.</p>
+        </div>
+        <span class="card-arrow">↗</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- LIÊN HỆ -->
+  <section id="contact">
+    <div class="section-head">
+      <p class="label">Liên hệ</p>
+      <h2>Kết nối với giảng viên</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="c-icon">✉️</div>
+        <div>
+          <p class="c-lbl">Email</p>
+          <p class="c-val">diep.le@university.edu.vn</p>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="c-icon">🏛️</div>
+        <div>
+          <p class="c-lbl">Văn phòng</p>
+          <p class="c-val">Phòng —, Khoa Thương mại Quốc tế</p>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="c-icon">🕐</div>
+        <div>
+          <p class="c-lbl">Giờ tiếp sinh viên</p>
+          <p class="c-val">Thứ 2 – Thứ 6: 8:00 – 11:30</p>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="c-icon">📂</div>
+        <div>
+          <p class="c-lbl">Tài liệu</p>
+          <a href="#docs" class="c-link">Xem tại mục Tài liệu học tập ↑</a>
+        </div>
+      </div>
+    </div>
+    <div class="contact-cta">
+      <a href="mailto:diep.le@university.edu.vn" class="btn-main">Gửi email ngay</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-name">Điệp Lê</p>
+    <p class="footer-note">© 2025 · Tài liệu chỉ dùng cho mục đích học tập</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
